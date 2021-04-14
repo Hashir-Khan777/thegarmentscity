@@ -1,6 +1,6 @@
 {
-  "short_name": "Garments City",
   "name": "Garments City Clothing Store",
+  "short_name": "Garments City",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,17 +8,19 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.jpg",
-      "type": "image/jpg",
-      "sizes": "192x192"
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
     },
     {
-      "src": "logo512.jpg",
-      "type": "image/jpg",
+      "src": "logo512.png",
+      "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "scope": "/",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#e74b32",
   "background_color": "#ffffff"
