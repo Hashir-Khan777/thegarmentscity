@@ -1,0 +1,33 @@
+.none {
+  display: none;
+}
+
+.billing_form_content label {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.billing_form_content input {
+  margin-bottom: 7px;
+  margin-top: 5px;
+}
+
+.billing_input {
+  border: none;
+  width: 100%;
+  padding: 10px 5px;
+  font-size: 18px;
+  border: 1px solid #e74b32;
+  color: #620d05;
+  border-radius: 4px;
+}
+
+.billing_form > h2 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.billing_date {
+  width: 100%;
+  padding: 10px 0;
+}

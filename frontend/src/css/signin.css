@@ -1,0 +1,216 @@
+.sign_in_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.form_heading {
+  font-size: 30px;
+  font-weight: 800;
+  color: #620d05;
+  margin-bottom: 20px;
+}
+
+.sign_in_form fieldset {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border: none;
+  width: 50vw;
+}
+
+.sign_in_form label {
+  font-weight: 900;
+  color: #620d05;
+  font-size: 19px;
+}
+
+.email_section,
+.password_section {
+  margin: 20px 0;
+}
+
+.email_password_section {
+  margin: 4px 0;
+}
+
+.sign_in_input {
+  border: none;
+  width: 40vw;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #e74b32;
+  color: #620d05;
+  border-radius: 4px;
+}
+
+.signin_submit_button {
+  border: none;
+  background: none;
+  width: 40vw;
+  text-align: center;
+  border: 1px solid #e74b32;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #620d05;
+  font-weight: 900;
+  padding: 10px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.signin_submit_button:hover {
+  background-color: #e74b32;
+  transition: all 0.3s ease;
+}
+
+.new_customer {
+  display: inline-block;
+  padding-right: 7px;
+  color: #620d05;
+  font-weight: 600;
+}
+
+.sign_in_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
+
+.form_heading {
+  font-size: 30px;
+  font-weight: 800;
+  color: #620d05;
+  margin-bottom: 20px;
+}
+
+.sign_in_form fieldset {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  border: none;
+  width: 50vw;
+}
+
+.sign_in_form label {
+  font-weight: 900;
+  color: #620d05;
+  font-size: 19px;
+}
+
+.email_section,
+.password_section {
+  margin: 20px 0;
+}
+
+.email_password_section {
+  margin: 4px 0;
+}
+
+.sign_in_input {
+  border: none;
+  width: 40vw;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #e74b32;
+  color: #620d05;
+  border-radius: 4px;
+}
+
+.signin_submit_button {
+  border: none;
+  background: none;
+  width: 40vw;
+  text-align: center;
+  border: 1px solid #e74b32;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #620d05;
+  font-weight: 900;
+  padding: 10px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.signin_submit_button:hover {
+  background-color: #e74b32;
+  transition: all 0.3s ease;
+}
+
+.new_customer {
+  display: inline-block;
+  padding-right: 7px;
+  color: #620d05;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.error_message_signin {
+  width: 40vw;
+  color: #a02020;
+  background-color: #ffe0e0;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.social_auth {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.facebook_google_auth_button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.facebook_google_auth_button button {
+  background: none;
+  border: none;
+  border: 1px solid #e74b32;
+  height: 48px;
+  width: 100%;
+  margin: 0 15px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 4px;
+  color: #620d05 !important;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.facebook_google_auth_button button span {
+  width: 100%;
+  font-size: 15px;
+}
+
+.facebook_google_auth_button button:hover {
+  background-color: #e74b32;
+  transition: all 0.3s ease-in-out;
+}
+
+.auth_icon {
+  color: #620d05 !important;
+  font-size: 20px;
+  margin: 0 4px 0 10px;
+}
+
+.or_login {
+  position: relative;
+  color: #620d05;
+  width: 100%;
+  height: 4vh;
+}
+
+.choose_file {
+  width: 40vw;
+}

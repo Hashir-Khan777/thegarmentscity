@@ -1,0 +1,15 @@
+.filter_content {
+  flex: 1;
+}
+
+.filter_content h1 {
+  text-align: center;
+  margin: 10px 0;
+  color: #620d05;
+}
+
+.filtered_products {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

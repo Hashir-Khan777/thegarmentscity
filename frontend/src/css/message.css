@@ -1,0 +1,9 @@
+.message {
+  display: flex;
+  width: 100vw;
+  height: auto;
+  background-color: #ffe0e0;
+  color: #a02020;
+  padding: 20px;
+  border-radius: 4px;
+}

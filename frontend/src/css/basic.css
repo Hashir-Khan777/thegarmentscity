@@ -1,0 +1,47 @@
+@font-face {
+  font-family: signika;
+  src: url(./font/Signika-Medium.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  list-style: none;
+  font-family: signika;
+}
+
+.garments_city_home,
+.product,
+.SignIn,
+.register,
+.Cart,
+.shipping,
+.payment_method,
+.place_order,
+.order_screen,
+.summer_collection,
+.user_account,
+.privacy_policy,
+.contact,
+.your_orders,
+.your_reviews,
+.edit_your_profile,
+.garmentscitydashboard,
+.all_users,
+.one_user,
+.all_reviews,
+.messages,
+.update,
+.filters,
+.error_page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.golden {
+  color: gold;
+}

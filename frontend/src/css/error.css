@@ -1,0 +1,16 @@
+.error_content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.error_content > i {
+  color: #620d05 !important;
+  font-size: 50px;
+  margin-right: 20px;
+}
+
+.error_content > h1 {
+  color: #620d05;
+}

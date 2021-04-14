@@ -1,0 +1,68 @@
+footer {
+  position: relative;
+  bottom: 0px;
+  width: 100%;
+  height: auto;
+}
+
+.footer_content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: #e74b32;
+  color: #620d05;
+  padding: 10px 0;
+}
+
+.footer_content a {
+  color: #620d05;
+}
+
+.copy_icon {
+  margin: 0 10px;
+  font-size: 20px !important;
+}
+
+.garments_city_footer_section {
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 1px solid #620d05;
+  padding: 20px 0;
+  background-color: #e74b32;
+}
+
+.garments_city_footer_section h3 {
+  color: #620d05;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.footer_item {
+  padding-bottom: 10px;
+}
+
+.footer_item a {
+  color: #620d05;
+}
+
+.footer_item a:hover {
+  text-decoration: underline;
+}
+
+.why_garments_city p {
+  color: #620d05;
+  width: 60%;
+  text-align: justify;
+  line-height: 1.5rem;
+}
+
+.social_item {
+  text-align: center;
+  margin: 0 0 25px 0;
+}
+
+.social_item i {
+  color: #620d05;
+  font-size: 25px;
+}

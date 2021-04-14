@@ -1,0 +1,86 @@
+.user_signed_in {
+  position: relative;
+}
+
+.user_signed_in_content {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.usersigned_in_item img {
+  height: 7vh;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.down_key {
+  color: #620d05 !important;
+  font-size: 30px !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.user_panel_list {
+  position: fixed;
+  display: none;
+  width: 250px;
+  right: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.12), 0 6px 6px 0 rgba(0, 0, 0, 0.24);
+  transition: all 0.3s ease-in-out;
+  border-radius: 5px;
+}
+
+.block_panel {
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+.user_panel_item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+  padding: 10px 0;
+  color: #620d05;
+  transition: all 0.3s ease-in-out;
+}
+
+.log_out {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.user_panel_item a {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px 0;
+  text-align: center;
+  color: #620d05;
+  transition: all 0.3s ease-in-out;
+}
+
+.user_panel_item .log_out:hover,
+.user_panel_item a:hover {
+  color: #e74b32;
+  transition: all 0.3s ease-in-out;
+}
+
+.user_panel_item p {
+  font-size: 18px;
+  margin-left: 15px;
+}
+
+.arrow_rotate {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}

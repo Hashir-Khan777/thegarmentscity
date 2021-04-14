@@ -1,0 +1,13 @@
+.loading {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.spinner {
+  font-size: 30px !important;
+  margin-right: 10px;
+}

@@ -1,0 +1,162 @@
+.featured_item {
+  margin: 0px 5px;
+}
+
+.featured_card {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  border: 1px solid #620d05;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin: 10px 0;
+}
+
+.card_image figure {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+}
+
+.card_image figure img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card_details h3 {
+  margin: 10px 0;
+  color: #620d05;
+}
+
+.card_price p {
+  color: #e74b32;
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 10px;
+}
+
+.ratings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating_star {
+  cursor: pointer;
+  margin: 0 1px;
+}
+
+.ratings_reviews {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.reviews {
+  padding: 0 10px;
+  color: #620d05;
+}
+
+.best_seller_badge {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  font-size: 12px;
+  font-weight: 900;
+  background-color: #e74b32;
+  border-radius: 4px;
+  color: #620d05;
+  padding: 5px;
+  z-index: 999;
+}
+
+.product_brand span {
+  color: #620d05;
+  text-decoration: underline;
+}
+
+.size {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.size h2 {
+  color: #620d05;
+}
+
+.size_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  width: 90%;
+}
+
+.size_list li label {
+  color: #620d05;
+  margin-left: 5px;
+  font-size: 20px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.size_list li label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.size_list li label .label_text {
+  margin-left: 30px;
+}
+
+.size_list li label .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.size_list li label:hover input ~ .checkmark {
+  background-color: #ccc;
+  transition: all 0.3s ease-in-out;
+}
+
+.size_list li label input:checked ~ .checkmark {
+  background-color: #e74b32;
+  transition: all 0.3s ease-in-out;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.size_list li label input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.size_list li label .checkmark:after {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}

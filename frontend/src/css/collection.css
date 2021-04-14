@@ -1,0 +1,26 @@
+.summer_featured_content {
+  flex: 1;
+}
+
+.summer_featured_products {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.summer_products_heading {
+  margin: 10px;
+}
+
+.summer_products_heading > h1 {
+  color: #620d05;
+}
+
+.summer_products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}

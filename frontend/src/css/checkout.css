@@ -1,0 +1,22 @@
+.checkout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.checkout > div {
+  width: 20%;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.checkout > div.completed {
+  border-top: 1px solid #f08000;
+  color: #f08000;
+}
+
+.checkout > div.notCompleted {
+  border-top: 1px solid #808080;
+  color: #808080;
+}

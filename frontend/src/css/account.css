@@ -1,0 +1,82 @@
+.user_account_panel {
+  flex: 1;
+}
+
+.user_account_panel_content {
+  margin-top: 20px;
+}
+
+.account_name_image {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.profile_image figure {
+  position: relative;
+}
+
+.profile_image figure img {
+  height: 20vh;
+  object-fit: contain;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.account_user_info {
+  width: 70%;
+}
+
+.account_panel_name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border-bottom: 1px solid #620d05;
+}
+
+.account_panel_name h1 {
+  color: #620d05;
+  margin-right: 20px;
+}
+
+.edit_link {
+  color: #620d05;
+  border: 1px solid #e74b32;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.edit_link:hover {
+  background-color: #e74b32;
+  transition: all 0.3s ease-in-out;
+}
+
+.user_personal_info_content h2 {
+  color: #620d05;
+  margin-top: 20px;
+}
+
+.user_personal_info_content p {
+  margin-left: 20px;
+}
+
+.profile_user_info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.user_personal_info {
+  margin-top: 10px;
+  color: #620d05;
+}
+
+.personal_info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0;
+}

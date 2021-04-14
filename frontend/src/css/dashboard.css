@@ -1,0 +1,35 @@
+.dashboard {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.dashboard_content {
+  display: flex;
+  width: 100%;
+  align-self: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.dashboard_links {
+  width: 50%;
+}
+
+.all_orders {
+  width: 50%;
+}
+
+.user_orders h2 {
+  color: #620d05;
+  text-align: center;
+}
+
+.dashboard_item {
+  margin: 20px 10px;
+}
+
+.dashboard_item > a {
+  color: #620d05;
+}

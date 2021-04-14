@@ -1,0 +1,21 @@
+@media screen and (max-width: 1125px) {
+  .second_header {
+    display: block !important;
+  }
+
+  .first_header {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .search_input_second {
+    width: 90vw !important;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .checkout_buttons {
+    width: 80%;
+  }
+}

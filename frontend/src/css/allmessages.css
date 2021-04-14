@@ -1,0 +1,10 @@
+.all_messages {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.message_content {
+  align-self: flex-start;
+}

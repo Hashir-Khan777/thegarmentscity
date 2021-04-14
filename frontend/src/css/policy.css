@@ -1,0 +1,21 @@
+.privacy_policy_for_garments_city {
+  flex: 1;
+  margin: 30px 20px;
+  text-align: justify;
+}
+
+.privacy_policy_for_garments_city h1,
+.privacy_policy_for_garments_city h2 {
+  margin: 20px 0 10px 0;
+  color: #620d05;
+}
+
+.privacy_policy_for_garments_city p {
+  color: #620d05;
+  line-height: 1.5em;
+}
+
+.privacy_policy_for_garments_city li {
+  color: #620d05;
+  margin: 10px 0;
+}

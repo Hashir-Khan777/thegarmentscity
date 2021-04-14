@@ -1,0 +1,50 @@
+.featured_cloths {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 20px 30px;
+}
+
+.featured_cloths {
+  color: #620d05;
+}
+
+.featured_cloths h1 {
+  margin: 10px 0;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0px 10px;
+}
+
+.load_more_button {
+  background: none;
+  border: none;
+  border: 1px solid #e74b32;
+  color: #620d05;
+  font-size: 17px;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.load_more_button:hover {
+  background-color: #e74b32;
+  transition: all 0.3s ease-in-out;
+}
+
+.load_more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}

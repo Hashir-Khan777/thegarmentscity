@@ -1,0 +1,46 @@
+.your_order_content {
+  flex: 1;
+}
+
+tr th {
+  color: #620d05;
+  font-size: 20px;
+}
+
+.your_order_content h1 {
+  text-align: center;
+  color: #620d05;
+  margin: 20px 0;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+  border-spacing: 10px;
+  margin: 20px 0;
+}
+
+.cancel_order_button {
+  border: none;
+  background: none;
+  width: 50%;
+  text-align: center;
+  border: 1px solid #e74b32;
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #620d05;
+  padding: 10px 0;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.cancel_order_button:hover {
+  background-color: #e74b32;
+  transition: all 0.3s ease;
+}
+
+.no_orders p {
+  margin: 0 10px;
+  font-size: 20px;
+}

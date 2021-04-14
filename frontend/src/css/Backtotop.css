@@ -1,0 +1,41 @@
+.back_to_top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+  z-index: 9999;
+}
+
+.top_content {
+  display: none;
+  width: 10%;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background: none;
+  justify-content: space-evenly;
+  align-items: center;
+  color: #620d05;
+  background-color: #fff;
+  cursor: pointer;
+  box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+.go_top {
+  font-size: 25px !important;
+  font-weight: 900 !important;
+  color: #620d05;
+}
+
+.go_top_text {
+  font-size: 15px;
+}
+
+.top_content.top_block {
+  display: flex;
+  transition: all 0.3s ease-in-out;
+}
