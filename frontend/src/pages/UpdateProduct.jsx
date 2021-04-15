@@ -23,15 +23,22 @@ const UpdateProduct = (props) => {
   const [gender, setGender] = useState();
   const [collection, setCollection] = useState();
   const [category, setCategory] = useState();
-  const [SmallStock, setSmallStock] = useState();
-  const [MediumStock, setMediumStock] = useState();
-  const [LargeStock, setLargeStock] = useState();
+  const [sizes, setSizes] = useState();
+  const [stock, setStock] = useState();
+  const [WalleteStock, setWalleteStock] = useState();
   const [brand, setBrand] = useState();
   const [image, setImage] = useState();
   const [passwordError, setPasswordError] = useState();
   const [uploadLoading, setUploadLoading] = useState(false);
 
   const dispatch = useDispatch();
+
+  const combineArrays = (first, second) => {
+    return first.reduce((acc, val, ind) => {
+      acc[val] = second[ind];
+      return acc;
+    }, {});
+  };
 
   const imageHandler = (e) => {
     if (e.target.files[0]) {
@@ -41,6 +48,17 @@ const UpdateProduct = (props) => {
 
   const update = (e) => {
     e.preventDefault();
+    const Productsizes = [];
+    if (sizes && stock) {
+      const obj = combineArrays(sizes.split(", "), stock.split(", "));
+      for (var i = 0; i < Object.keys(obj).length; i++) {
+        Productsizes.push({
+          size: Object.keys(obj)[i],
+          stock: Number(Object.values(obj)[i]),
+        });
+      }
+    }
+
     if (image.name) {
       const uploadImage = firebase
         .storage()
@@ -73,9 +91,10 @@ const UpdateProduct = (props) => {
                   gender,
                   collec: collection,
                   category,
-                  SmallStock,
-                  MediumStock,
-                  LargeStock,
+                  size:
+                    Productsizes.length >= 1
+                      ? Productsizes
+                      : [{ size: "wallete", stock: Number(WalleteStock) }],
                   brand,
                   image,
                 })
@@ -96,9 +115,10 @@ const UpdateProduct = (props) => {
           gender,
           collec: collection,
           category,
-          SmallStock,
-          MediumStock,
-          LargeStock,
+          size:
+            Productsizes.length >= 1
+              ? Productsizes
+              : [{ size: "wallete", stock: Number(WalleteStock) }],
           brand,
           image,
         })
@@ -116,13 +136,20 @@ const UpdateProduct = (props) => {
       product && setGender(product.gender);
       product && setCollection(product.collec);
       product && setCategory(product.category);
-      product && setSmallStock(product.SmallStock);
-      product && setMediumStock(product.MediumStock);
-      product && setLargeStock(product.LargeStock);
+      if (product && product.sizes) {
+        let prodsize = product.sizes.map((item) => item.size);
+        setSizes(prodsize.join(", "));
+        let prodstock = product.sizes.map((item) => item.stock);
+        setStock(prodstock.join(", "));
+        if (product.sizes[0].size === "wallete") {
+          setWalleteStock(product.sizes[0].stock);
+          setStock();
+        }
+      }
       product && setBrand(product.brand);
       product && setImage(product.image);
     }
-  }, [dispatch, product, props.match.params.id]);
+  }, [dispatch, product, props.match.params.id, category]);
 
   return (
     <div className="register">
@@ -260,65 +287,149 @@ const UpdateProduct = (props) => {
                   </div>
                 </div>
 
-                <div className="password_section">
-                  <div className="email_password_section">
+                <div className="all_stocks">
+                  <div
+                    className="password_section"
+                    style={
+                      (category && category.toLowerCase().includes("shoes")) ||
+                      (category && category.toLowerCase().includes("purse")) ||
+                      (category && category.toLowerCase().includes("wallet"))
+                        ? { display: "none" }
+                        : { display: "block" }
+                    }
+                  >
+                    <div className="email_password_section">
+                      <div>
+                        <label htmlFor="prod_size">Product Sizes:</label>
+                      </div>
+                    </div>
                     <div>
-                      <label htmlFor="small_stock">Small Stock:</label>
+                      <div>
+                        <input
+                          className="sign_in_input"
+                          type="text"
+                          name="confirm password"
+                          id="prod_size"
+                          placeholder="Enter product sizes"
+                          value={sizes}
+                          onChange={(e) => setSizes(e.target.value)}
+                        />
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <div>
-                      <input
-                        className="sign_in_input"
-                        type="number"
-                        name="confirm password"
-                        id="small_stock"
-                        placeholder="Enter small stock"
-                        value={SmallStock}
-                        onChange={(e) => setSmallStock(e.target.value)}
-                      />
-                    </div>
-                  </div>
-                </div>
 
-                <div className="password_section">
-                  <div className="email_password_section">
+                  <div
+                    className="password_section"
+                    style={
+                      (category && category.toLowerCase().includes("shoes")) ||
+                      (category && category.toLowerCase().includes("purse")) ||
+                      (category && category.toLowerCase().includes("wallet"))
+                        ? { display: "none" }
+                        : { display: "block" }
+                    }
+                  >
+                    <div className="email_password_section">
+                      <div>
+                        <label htmlFor="prod_stock">Product Stock:</label>
+                      </div>
+                    </div>
                     <div>
-                      <label htmlFor="medium_stock">Medium Stock:</label>
+                      <div>
+                        <input
+                          className="sign_in_input"
+                          type="text"
+                          name="confirm password"
+                          id="prod_stock"
+                          placeholder="Enter product stock"
+                          value={stock}
+                          onChange={(e) => setStock(e.target.value)}
+                        />
+                      </div>
                     </div>
                   </div>
-                  <div>
-                    <div>
-                      <input
-                        className="sign_in_input"
-                        type="number"
-                        name="confirm password"
-                        id="medium_stock"
-                        placeholder="Enter medium stock"
-                        value={MediumStock}
-                        onChange={(e) => setMediumStock(e.target.value)}
-                      />
-                    </div>
-                  </div>
-                </div>
 
-                <div className="password_section">
-                  <div className="email_password_section">
+                  <div
+                    className="password_section"
+                    style={
+                      category && category.toLowerCase().includes("shoes")
+                        ? { display: "block" }
+                        : { display: "none" }
+                    }
+                  >
+                    <div className="email_password_section">
+                      <div>
+                        <label htmlFor="shoe_numbers">Shoes Numbers:</label>
+                      </div>
+                    </div>
                     <div>
-                      <label htmlFor="large_stock">Large Stock:</label>
+                      <div>
+                        <input
+                          className="sign_in_input"
+                          type="text"
+                          name="confirm password"
+                          id="shoe_numbers"
+                          placeholder="2, 3, 4"
+                          value={sizes}
+                          onChange={(e) => setSizes(e.target.value)}
+                        />
+                      </div>
                     </div>
                   </div>
-                  <div>
+
+                  <div
+                    className="password_section"
+                    style={
+                      category && category.toLowerCase().includes("shoes")
+                        ? { display: "block" }
+                        : { display: "none" }
+                    }
+                  >
+                    <div className="email_password_section">
+                      <div>
+                        <label htmlFor="shoe_stock">Shoes Stock:</label>
+                      </div>
+                    </div>
                     <div>
-                      <input
-                        className="sign_in_input"
-                        type="number"
-                        name="confirm password"
-                        id="large_stock"
-                        placeholder="Enter large stock"
-                        value={LargeStock}
-                        onChange={(e) => setLargeStock(e.target.value)}
-                      />
+                      <div>
+                        <input
+                          className="sign_in_input"
+                          type="text"
+                          name="confirm password"
+                          id="shoe_stock"
+                          placeholder="20, 10, 30"
+                          value={stock}
+                          onChange={(e) => setStock(e.target.value)}
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  <div
+                    className="password_section"
+                    style={
+                      (category && category.toLowerCase().includes("purse")) ||
+                      (category && category.toLowerCase().includes("wallet"))
+                        ? { display: "block" }
+                        : { display: "none" }
+                    }
+                  >
+                    <div className="email_password_section">
+                      <div>
+                        <label htmlFor="wallete_stock">Stock:</label>
+                      </div>
+                    </div>
+                    <div>
+                      <div>
+                        <input
+                          className="sign_in_input"
+                          type="number"
+                          name="confirm password"
+                          id="wallete_stock"
+                          placeholder="Enter wallet or purse stock"
+                          value={WalleteStock}
+                          onChange={(e) => setWalleteStock(e.target.value)}
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -355,7 +466,9 @@ const UpdateProduct = (props) => {
                       <input
                         className="sign_in_input"
                         type="file"
-                        name="confirm password"
+                        accept="image/*"
+                        name="image"
+                        formEncType="multipart/form-data"
                         id="prodimage"
                         onChange={imageHandler}
                       />

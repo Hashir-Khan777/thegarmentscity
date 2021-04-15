@@ -132,10 +132,7 @@ productRouter.put(
       product.price = req.body.price;
       product.stock = req.body.stock;
       product.gender = req.body.gender;
-      product.smallStock = req.body.SmallStock;
-      product.mediumStock = req.body.MediumStock;
-      product.largeStock = req.body.LargeStock;
-
+      product.sizes = req.body.size;
       const update_product = await product.save();
       res.send(update_product);
     }
@@ -154,16 +151,7 @@ productRouter.post(
       price: req.body.price,
       stock: req.body.stock,
       gender: req.body.gender,
-      sizes: {
-        small: req.body.SmallStock,
-        medium: req.body.MediumStock,
-        large: req.body.LargeStock,
-      },
-      shoes: {
-        shoeNumbers: req.body.ShoesNumbers,
-        shoeStocks: req.body.ShoesStock,
-      },
-      walleteStock: req.body.WalleteStock,
+      sizes: req.body.size,
     });
     const new_product = await product.save();
     res.send(new_product);
