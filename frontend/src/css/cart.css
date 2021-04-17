@@ -29,18 +29,16 @@
 .product_item {
   display: flex;
   justify-content: space-between;
-  margin: 10px 0;
+  margin: 40px 0;
 }
 
 .cart_product_image_name {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
 }
 
 .quantity_price_delete_item {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -49,6 +47,7 @@
   position: relative;
   width: 100px;
   height: 100px;
+  margin-right: 20px;
 }
 
 .cart_product_image img {
@@ -60,6 +59,9 @@
 
 .cart_product_description {
   color: #620d05;
+  max-width: 400px;
+  font-weight: 500;
+  line-height: 1.5em;
 }
 
 .select_quantity {

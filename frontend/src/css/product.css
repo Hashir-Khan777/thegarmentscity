@@ -20,7 +20,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  height: 100%;
+  height: 90%;
   width: 100%;
   margin: 30px 0;
 }
@@ -46,12 +46,14 @@
   height: 500px;
   object-fit: contain;
   object-position: center;
+  transition: all 0.3s ease-in-out;
 }
 
-.details h1 {
+.details h2 {
   color: #620d05;
   margin: 10px 0;
-  width: 350px;
+  max-width: 350px;
+  font-weight: 500;
 }
 
 .rating_reviews_details {
@@ -148,7 +150,7 @@
 .comment_box {
   display: block;
   margin-top: 10px;
-  width: 40vw;
+  width: 100%;
   height: 30vh;
   font-size: 20px;
   border: 1px solid #e74b32;
@@ -230,6 +232,11 @@
 
 .reviews {
   margin-bottom: 20px;
+}
+
+.write_review {
+  position: relative;
+  width: 40vw;
 }
 
 .writen_reviews {

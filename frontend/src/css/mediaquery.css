@@ -1,21 +1,66 @@
+@media screen and (max-width: 1000px) {
+  .sign_in_input,
+  .signin_submit_button {
+    width: 90vw;
+  }
+}
+
 @media screen and (max-width: 1125px) {
-  .second_header {
-    display: block !important;
+  .products_list_section {
+    width: 100%;
+    padding: 0 20px;
   }
+  .checkout_section {
+    width: 100%;
+    margin: 10px 20px;
+  }
+}
 
-  .first_header {
-    display: none;
+@media screen and (max-width: 500px) {
+  .featured_card {
+    width: 100%;
   }
 }
 
-@media screen and (max-width: 540px) {
-  .search_input_second {
-    width: 90vw !important;
+@media screen and (max-width: 740px) {
+  .garments_city_footer_section {
+    display: block;
+    padding: 20px;
+  }
+  .social_item {
+    text-align: start;
+  }
+  .garments_city_links,
+  .policy {
+    margin-top: 20px;
+  }
+  .write_review {
+    width: 80vw;
+  }
+  .contact_content fieldset input,
+  .contact_content fieldset textarea,
+  .post_message {
+    width: 80vw;
   }
 }
+
+/* @media screen and (max-width: 790px) {
+  .cart_product_description {
+    max-width: 200px;
+  }
+} */
 
 @media screen and (max-width: 470px) {
+  .image_section > figure > img {
+    width: 200px;
+    height: 300px;
+  }
+  .checkout_buttons,
+  .details {
+    width: 90%;
+    margin: 0 10px;
+  }
   .checkout_buttons {
-    width: 80%;
+    margin-top: 20px;
   }
 }

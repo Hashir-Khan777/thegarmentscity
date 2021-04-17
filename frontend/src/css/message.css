@@ -1,6 +1,6 @@
 .message {
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: auto;
   background-color: #ffe0e0;
   color: #a02020;

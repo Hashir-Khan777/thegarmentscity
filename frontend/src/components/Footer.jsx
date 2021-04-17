@@ -43,7 +43,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="policy">
-            <h3>social links</h3>
+            <h3>Follow Us</h3>
             <ul className="social_list">
               <li className="social_item">
                 <a

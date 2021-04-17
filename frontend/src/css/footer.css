@@ -26,6 +26,7 @@ footer {
 
 .garments_city_footer_section {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   border-bottom: 1px solid #620d05;
   padding: 20px 0;
@@ -52,7 +53,7 @@ footer {
 
 .why_garments_city p {
   color: #620d05;
-  width: 60%;
+  max-width: 400px;
   text-align: justify;
   line-height: 1.5rem;
 }

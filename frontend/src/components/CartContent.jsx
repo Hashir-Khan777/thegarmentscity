@@ -27,27 +27,24 @@ const CartContent = () => {
                 {cartItems.map((item) => {
                   return (
                     <li className="product_item" key={item.product}>
-                      <div className="cart_product_image_name">
-                        <figure className="cart_product_image">
-                          <Link
-                            to={`/product/${item.description}/${item.product}`}
-                          >
+                      <Link
+                        to={`/product/${item.description.replace(/ /g, "-")}/${
+                          item.product
+                        }`}
+                      >
+                        <div className="cart_product_image_name">
+                          <figure className="cart_product_image">
                             <img
                               src={item.image}
                               alt={item.description}
                               title={item.description}
                             />
-                          </Link>
-                        </figure>
-                        <h2>
-                          <Link
-                            className="cart_product_description"
-                            to={`/product/${item.description}/${item.product}`}
-                          >
+                          </figure>
+                          <h3 className="cart_product_description">
                             {item.description}
-                          </Link>
-                        </h2>
-                      </div>
+                          </h3>
+                        </div>
+                      </Link>
 
                       <div className="quantity_price_delete_item">
                         <select

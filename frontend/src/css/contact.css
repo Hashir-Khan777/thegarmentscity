@@ -5,7 +5,7 @@
   flex: 1;
 }
 
-fieldset {
+.contact_content fieldset {
   display: flex;
   position: relative;
   justify-content: center;
@@ -23,8 +23,8 @@ legend h1 {
   margin-bottom: 10px;
 }
 
-fieldset input,
-fieldset textarea {
+.contact_content fieldset input,
+.contact_content fieldset textarea {
   width: 50vw;
   margin: 10px 0;
   font-size: 18px;
