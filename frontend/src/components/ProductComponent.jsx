@@ -31,13 +31,13 @@ const ProductComponent = (props) => {
   const { userInfo } = userSignin;
 
   const PostReview = useSelector((state) => state.PostReview);
-  const { posterror, reviewPosted } = PostReview;
+  const { posterror } = PostReview;
 
   const SetReview = useSelector((state) => state.SetReview);
   const { reviewerror, customerReviews } = SetReview;
 
   const DeleteReview = useSelector((state) => state.DeleteReview);
-  const { deleteerror, reviewsdeleted } = DeleteReview;
+  const { deleteerror } = DeleteReview;
 
   const ChangeReviews = useSelector((state) => state.ChangeReviews);
   const { reviewschanged } = ChangeReviews;
@@ -81,10 +81,6 @@ const ProductComponent = (props) => {
       setSize(product.sizes[0].size);
     }
   }, [product]);
-
-  useEffect(() => {
-    dispatch(Set_Review());
-  }, [dispatch, reviewsdeleted, reviewPosted]);
 
   return (
     <div className="product_component">
