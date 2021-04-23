@@ -8,7 +8,7 @@ const Post_Review = (reviewId, name, review) => async (dispatch, getState) => {
     } = getState();
 
     const { data } = await Axios.post(
-      "https://thegarmentscity.herokuapp.com/api/reviews",
+      "http://127.0.0.2:5000/api/reviews",
       {
         name,
         review,
@@ -35,9 +35,7 @@ const Post_Review = (reviewId, name, review) => async (dispatch, getState) => {
 const Set_Review = () => async (dispatch) => {
   dispatch({ type: "SET_REVIEW_REQUEST" });
   try {
-    const { data } = await Axios.get(
-      "https://thegarmentscity.herokuapp.com/api/reviews"
-    );
+    const { data } = await Axios.get("http://127.0.0.2:5000/api/reviews");
     dispatch({ type: "SET_REVIEW_SUCESS", payload: data });
   } catch (err) {
     dispatch({

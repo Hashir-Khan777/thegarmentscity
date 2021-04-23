@@ -57,16 +57,23 @@
   object-fit: contain;
 }
 
-.shipping_card_iamge {
+.shipping_card_iamge > a {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 
+.shipping_card_iamge h3 {
+  color: #620d05;
+  font-weight: 500;
+  max-width: 400px;
+  font-size: 20px;
+  line-height: 1.7rem;
+  height: 30px;
+}
+
 .shipping_item {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin: 15px 0;

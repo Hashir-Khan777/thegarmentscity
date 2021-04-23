@@ -28,7 +28,7 @@ reviewRouter.get(
 reviewRouter.delete(
   "/:id",
   expressAsyncHandler(async (req, res) => {
-    const delete_reviews = await ReviewModel.findByIdAndRemove(req.params.id);
+    const delete_reviews = await ReviewModel.findByIdAndDelete(req.params.id);
     res.send(delete_reviews);
   })
 );

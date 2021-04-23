@@ -64,6 +64,7 @@ const SummerCollection = () => {
                       description={product.description}
                       price={product.price}
                       reviews={product.reviews}
+                      brand={product.brand}
                     />
                   );
                 })}

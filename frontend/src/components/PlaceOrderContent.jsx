@@ -82,21 +82,14 @@ const PlaceOrderContent = (props) => {
                       return (
                         <li className="shipping_item" key={item.product}>
                           <div className="shipping_card_iamge">
-                            <figure>
-                              <Link
-                                to={`/product/${item.description}/${item.product}`}
-                              >
+                            <Link
+                              to={`/product/${item.description}/${item.product}`}
+                            >
+                              <figure>
                                 <img src={item.image} alt={item.description} />
-                              </Link>
-                            </figure>
-                            <h2>
-                              <Link
-                                className="shipping_title"
-                                to={`/product/${item.description}/${item.product}`}
-                              >
-                                {item.description}
-                              </Link>
-                            </h2>
+                              </figure>
+                              <h3>{item.description}</h3>
+                            </Link>
                           </div>
                           <div className="shipping_order_item_price">
                             <p>

@@ -5,8 +5,6 @@ import {
   Change_Reviews,
   Product_Details,
   Change_Reviews_Delete,
-  Change_Ratings,
-  Change_Ratings_Delete,
 } from "../store/action/FetchData";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -56,26 +54,30 @@ const ProductComponent = (props) => {
 
   const post = (id) => {
     dispatch(Post_Review(id, name, review));
-    dispatch(Set_Review());
     if (name && review) {
       dispatch(Change_Reviews(productId));
-      dispatch(Change_Ratings(productId));
+      // dispatch(Change_Ratings(productId));
+      dispatch(Set_Review());
+      setName("");
+      setReview("");
     }
-    setName("");
-    setReview("");
   };
 
   const delete_review = (reviewId) => {
     dispatch(Delete_Review(reviewId));
     dispatch(Change_Reviews_Delete(productId));
-    dispatch(Change_Ratings_Delete(productId));
+    // dispatch(Change_Ratings_Delete(productId));
     window.location.reload();
   };
 
   useEffect(() => {
     dispatch(Product_Details(productId));
-    dispatch(Set_Review());
+    // dispatch(Set_Review());
   }, [dispatch, productId]);
+
+  // useEffect(() => {
+  //   dispatch(Set_Review());
+  // }, [dispatch, writtenReviews]);
 
   useEffect(() => {
     if (product && product.sizes) {

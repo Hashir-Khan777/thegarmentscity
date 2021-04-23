@@ -14,6 +14,10 @@
     width: 100%;
     margin: 10px 20px;
   }
+  .shipping_details,
+  .order_summary {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -44,16 +48,10 @@
   }
 }
 
-/* @media screen and (max-width: 790px) {
-  .cart_product_description {
-    max-width: 200px;
-  }
-} */
-
 @media screen and (max-width: 470px) {
   .image_section > figure > img {
-    width: 200px;
-    height: 300px;
+    width: 80vw;
+    height: 100%;
   }
   .checkout_buttons,
   .details {

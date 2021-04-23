@@ -75,15 +75,15 @@ productRouter.get(
   })
 );
 
-productRouter.patch(
-  "/:id",
-  expressAsyncHandler(async (req, res) => {
-    const product = await Product.findById(req.params.id);
-    product.ratings = req.body.ratings;
-    const updated_product = await product.save();
-    res.send(updated_product);
-  })
-);
+// productRouter.patch(
+//   "/:id",
+//   expressAsyncHandler(async (req, res) => {
+//     const product = await Product.findById(req.params.id);
+//     product.ratings = req.body.ratings;
+//     const updated_product = await product.save();
+//     res.send(updated_product);
+//   })
+// );
 
 productRouter.patch(
   "/stock/:id",
@@ -106,6 +106,7 @@ productRouter.patch(
   expressAsyncHandler(async (req, res) => {
     const review = await Product.findById(req.params.id);
     review.reviews = req.body.reviews;
+    review.ratings = req.body.ratings;
     const update_review = await review.save();
     res.send(update_review);
   })
