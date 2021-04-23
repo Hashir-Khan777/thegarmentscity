@@ -20,6 +20,7 @@ import {
   MoreDataReducer,
 } from "./reducer/Reducer";
 import {
+  Change_Review_Reducer,
   Delete_Review_Reducer,
   Post_Review_Reducer,
   Set_Review_Reducer,
@@ -62,6 +63,7 @@ const reducer = combineReducers({
   MoreData: MoreDataReducer,
   Payment: PaymentReducer,
   Searching: SearchingReducer,
+  ChangeReviews: Change_Review_Reducer,
 });
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

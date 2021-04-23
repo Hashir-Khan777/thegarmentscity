@@ -14,6 +14,7 @@ const Post_Review_Reducer = (state = INITIAL_STATE, action) => {
       return {
         loading: false,
         reviews: action.payload,
+        reviewPosted: true,
       };
 
     case "REVIEW_POST_FAIL":
@@ -61,7 +62,7 @@ const Delete_Review_Reducer = (state = INITIAL_STATE, action) => {
     case "DELETE_REVIEW_SUCCESS":
       return {
         loading: false,
-        reviews: action.payload,
+        reviewsdeleted: true,
       };
 
     case "DELETE_REVIEW_FAIL":
@@ -75,4 +76,33 @@ const Delete_Review_Reducer = (state = INITIAL_STATE, action) => {
   }
 };
 
-export { Post_Review_Reducer, Set_Review_Reducer, Delete_Review_Reducer };
+const Change_Review_Reducer = (state = INITIAL_STATE, action) => {
+  switch (action.type) {
+    case "REVIEWS_CHANGE_REQUEST":
+      return {
+        loading: true,
+      };
+
+    case "REVIEWS_CHANGE_SUCCESS":
+      return {
+        loading: false,
+        reviewschanged: true,
+      };
+
+    case "REVIEWS_CHANGE_FAIL":
+      return {
+        loading: false,
+        reviewchangeerror: action.payload,
+      };
+
+    default:
+      return state;
+  }
+};
+
+export {
+  Post_Review_Reducer,
+  Set_Review_Reducer,
+  Delete_Review_Reducer,
+  Change_Review_Reducer,
+};

@@ -31,13 +31,16 @@ const ProductComponent = (props) => {
   const { userInfo } = userSignin;
 
   const PostReview = useSelector((state) => state.PostReview);
-  const { posterror } = PostReview;
+  const { posterror, reviewPosted } = PostReview;
 
   const SetReview = useSelector((state) => state.SetReview);
   const { reviewerror, customerReviews } = SetReview;
 
   const DeleteReview = useSelector((state) => state.DeleteReview);
-  const { deleteerror } = DeleteReview;
+  const { deleteerror, reviewsdeleted } = DeleteReview;
+
+  const ChangeReviews = useSelector((state) => state.ChangeReviews);
+  const { reviewschanged } = ChangeReviews;
 
   const add = () => {
     dispatch(Add_To_Cart(productId, quantity ? quantity : 1, size && size));
@@ -56,7 +59,6 @@ const ProductComponent = (props) => {
     dispatch(Post_Review(id, name, review));
     if (name && review) {
       dispatch(Change_Reviews(productId));
-      // dispatch(Change_Ratings(productId));
       dispatch(Set_Review());
       setName("");
       setReview("");
@@ -66,24 +68,23 @@ const ProductComponent = (props) => {
   const delete_review = (reviewId) => {
     dispatch(Delete_Review(reviewId));
     dispatch(Change_Reviews_Delete(productId));
-    // dispatch(Change_Ratings_Delete(productId));
-    window.location.reload();
+    dispatch(Set_Review());
   };
 
   useEffect(() => {
     dispatch(Product_Details(productId));
-    // dispatch(Set_Review());
-  }, [dispatch, productId]);
-
-  // useEffect(() => {
-  //   dispatch(Set_Review());
-  // }, [dispatch, writtenReviews]);
+    dispatch(Set_Review());
+  }, [dispatch, productId, reviewschanged]);
 
   useEffect(() => {
     if (product && product.sizes) {
       setSize(product.sizes[0].size);
     }
   }, [product]);
+
+  useEffect(() => {
+    dispatch(Set_Review());
+  }, [dispatch, reviewsdeleted, reviewPosted]);
 
   return (
     <div className="product_component">
