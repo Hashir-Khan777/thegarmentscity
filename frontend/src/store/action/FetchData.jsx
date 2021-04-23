@@ -49,58 +49,6 @@ const Product_Details = (productId) => async (dispatch) => {
   }
 };
 
-// const Change_Ratings = (id) => async (dispatch, getState) => {
-//   dispatch({ type: "RATINGS_CHANGE_REQUEST", payload: id });
-//   try {
-//     const {
-//       productDetails: { product },
-//     } = getState();
-
-//     const { data } = await Axios.patch(
-//       `https://thegarmentscity.herokuapp.com/api/products/${id}`,
-//       {
-//         ratings: product.ratings + 0.5,
-//       }
-//     );
-
-//     dispatch({ type: "RATINGS_CHANGE_SUCCESS", payload: data });
-//   } catch (err) {
-//     dispatch({
-//       type: "RATINGS_CHANGE_FAIL",
-//       payload:
-//         err.response && err.response.data.message
-//           ? err.response.data.message
-//           : err.message,
-//     });
-//   }
-// };
-
-// const Change_Ratings_Delete = (id) => async (dispatch, getState) => {
-//   dispatch({ type: "RATINGS_CHANGE_REQUEST", payload: id });
-//   try {
-//     const {
-//       productDetails: { product },
-//     } = getState();
-
-//     const { data } = await Axios.patch(
-//       `https://thegarmentscity.herokuapp.com/api/products/${id}`,
-//       {
-//         ratings: product.ratings - 0.5,
-//       }
-//     );
-
-//     dispatch({ type: "RATINGS_CHANGE_SUCCESS", payload: data });
-//   } catch (err) {
-//     dispatch({
-//       type: "RATINGS_CHANGE_FAIL",
-//       payload:
-//         err.response && err.response.data.message
-//           ? err.response.data.message
-//           : err.message,
-//     });
-//   }
-// };
-
 const Change_Reviews = (id) => async (dispatch, getState) => {
   dispatch({ type: "REVIEWS_CHANGE_REQUEST", payload: id });
   try {
@@ -109,7 +57,7 @@ const Change_Reviews = (id) => async (dispatch, getState) => {
     } = getState();
 
     const { data } = await Axios.patch(
-      `http://127.0.0.2:5000/api/products/review/${id}`,
+      `https://thegarmentscity.herokuapp.com/api/products/review/${id}`,
       {
         reviews: product.reviews + 1,
         ratings: product.ratings + 0.5,
@@ -135,7 +83,7 @@ const Change_Reviews_Delete = (id) => async (dispatch, getState) => {
     } = getState();
 
     const { data } = await Axios.patch(
-      `http://127.0.0.2:5000/api/products/review/${id}`,
+      `https://thegarmentscity.herokuapp.com/api/products/review/${id}`,
       {
         reviews: product.reviews - 1,
         ratings: product.ratings - 0.5,
@@ -204,8 +152,6 @@ const Change_Stock_Add = (id, stk, size, index) => async (dispatch) => {
 export {
   Fetch_Data,
   Product_Details,
-  // Change_Ratings,
-  // Change_Ratings_Delete,
   Change_Reviews,
   Change_Reviews_Delete,
   Change_Stock,
