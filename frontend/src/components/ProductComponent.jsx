@@ -92,10 +92,16 @@ const ProductComponent = (props) => {
         ) : (
           <div className="product_details">
             <div className="product_card">
-              <div className="image_section">
-                <figure>
-                  <img src={product.image} alt={product.description} />
-                </figure>
+              <div className="all_images">
+                <div className="image_section">
+                  <figure>
+                    <img
+                      id="myimage"
+                      src={product.image}
+                      alt={product.description}
+                    />
+                  </figure>
+                </div>
               </div>
 
               <div className="details">

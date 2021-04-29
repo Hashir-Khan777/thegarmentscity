@@ -94,20 +94,17 @@
 
 .size_list {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   margin: 10px 0;
-  width: 90%;
 }
 
 .size_list li label {
   color: #620d05;
-  margin-left: 5px;
   font-size: 20px;
   display: block;
   position: relative;
   cursor: pointer;
-  font-size: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
